@@ -5,12 +5,19 @@
           <Logo />
         <GoBack />
         <Product @toggleSlide = "toggleSlide"/>
-        <Footer />
+        <div class="hidden sm:block">
+          <Footer />
+        </div>
+        
         </div>
       </div>
-      <div :class="isSlideIn ? 'active' : ''" class="slider bg-white z-10 py-4">
+      <div class="slider bg-white z-10 py-4">
         <FormSlider />
+        <div class="block w-10/12 mx-auto py-4 sm:hidden">
+          <Footer />
+        </div>
       </div>
+      
   </div>
 </template>
 
@@ -21,8 +28,6 @@ import Logo from '@/components/Logo.vue'
 import Product from '@/components/Product.vue'
 import FormSlider from '@/components/FormSlider.vue'
 import Footer from '@/components/Footer.vue'
-import { ref } from 'vue'
-const isSlideIn = ref(false)
 
 </script>
 
