@@ -4,7 +4,7 @@
         <div class="mx-auto w-10/12">
           <Logo />
         <GoBack />
-        <Product />
+        <Product @toggleSlide = "toggleSlide"/>
         <Footer />
         </div>
       </div>
@@ -23,6 +23,7 @@ import FormSlider from '@/components/FormSlider.vue'
 import Footer from '@/components/Footer.vue'
 import { ref } from 'vue'
 const isSlideIn = ref(false)
+
 </script>
 
 <style lang="scss">
@@ -55,16 +56,5 @@ const isSlideIn = ref(false)
   // background: #3c42577e;
   box-shadow: -2px 0px 10px 0px rgba(0, 0, 0, 0.28);
 }
-@media (max-width: 768px) {
-  .slider {
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: translateX(110%)
-  }
-  .slider.active {
-    width: 100%;
-    transform: translateX(0)
-  }
-}
+
 </style>
